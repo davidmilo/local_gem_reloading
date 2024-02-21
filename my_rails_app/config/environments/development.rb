@@ -1,4 +1,5 @@
 require "active_support/core_ext/integer/time"
+require_relative "../../app/utils/local_gem_reloading"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -71,4 +72,9 @@ Rails.application.configure do
 
   # Raise error when a before_action's only/except options reference missing actions
   config.action_controller.raise_on_missing_callback_actions = true
+
+  LocalGemReloading.setup_reloading_for_local_zeitwerk_gem(
+    "my_root_namespace-my_namespace-my_gem",
+    Rails.root.join("../")
+  )
 end
