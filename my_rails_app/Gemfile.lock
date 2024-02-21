@@ -1,8 +1,9 @@
 PATH
-  remote: ../my_namespace-my_gem
+  remote: ../my_root_namespace-my_namespace-my_gem
   specs:
-    my_namespace-my_gem (0.1.0)
+    my_root_namespace-my_namespace-my_gem (0.1.0)
       http
+      zeitwerk
 
 GEM
   remote: https://rubygems.org/
@@ -269,7 +270,7 @@ DEPENDENCIES
   bootsnap
   debug
   importmap-rails
-  my_namespace-my_gem!
+  my_root_namespace-my_namespace-my_gem!
   propshaft
   puma (>= 5.0)
   rails (~> 7.1.3)

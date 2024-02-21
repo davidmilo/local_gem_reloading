@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
   def show
-    render inline: MyNamespace::MyGem.do_something
+    render inline: MyRootNamespace::MyNamespace::MyGem.do_something
   end
 end
