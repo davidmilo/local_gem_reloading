@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "lib/my_namespace/my_gem/version"
+require_relative "lib/my_root_namespace/my_namespace/my_gem/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "my_namespace-my_gem"
-  spec.version = MyNamespace::MyGem::VERSION
+  spec.name = "my_root_namespace-my_namespace-my_gem"
+  spec.version = MyRootNamespace::MyNamespace::MyGem::VERSION
   spec.authors = ["David"]
   spec.email = ["asmoo252@gmail.com"]
 
@@ -33,6 +33,7 @@ Gem::Specification.new do |spec|
 
   # Uncomment to register a new dependency of your gem
   spec.add_dependency "http"
+  spec.add_dependency "zeitwerk"
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
